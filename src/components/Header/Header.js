@@ -1,5 +1,7 @@
 import React from "react";
 import {Navbar,NavDropdown,Nav,Form, FormControl,Button} from "react-bootstrap";
+import SearchForm from "../Search/SearchForm";
+
 
 function Header() {
 	return (
@@ -24,10 +26,7 @@ function Header() {
 							</NavDropdown.Item>
 						</NavDropdown>
 					</Nav>
-					<Form inline>
-						<FormControl type="text" placeholder="Search" className="mr-sm-2" />
-						<Button variant="outline-success">Search</Button>
-					</Form>
+					<SearchForm /> 
 				</Navbar.Collapse>
 			</Navbar>
 		</header>
