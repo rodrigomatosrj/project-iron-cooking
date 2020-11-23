@@ -6,13 +6,22 @@ function RowIngredients(props) {
     <div>
       <div className="card mb-3">
         <div className="row no-gutters">
-          <div className="col-md-4"></div>
+          <div className="col-md-4">
+            <img
+              className="card-img"
+              alt="food img"
+              src={`https://www.themealdb.com/images/ingredients/${props.title}.png`}
+            />
+          </div>
           <div className="col-md-8">
             <div className="card-body">
               <h5 className="card-title">{props.title}</h5>
 
               <p>{props.description}</p>
-              <Link className="btn btn-primary" to={`/ingredients/${props.title}`}>
+              <Link
+                className="btn btn-primary"
+                to={`/ingredients/${props.title}`}
+              >
                 See meals
               </Link>
             </div>

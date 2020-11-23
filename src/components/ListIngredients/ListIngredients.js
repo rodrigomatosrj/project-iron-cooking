@@ -21,7 +21,7 @@ function ListIngredients() {
   }, []);
   return (
     <div>
-      <h3>All Categories</h3>
+      <h3>Choose your ingredient</h3>
       {ingList.length === 0 ? (
         <Loading />
       ) : (
