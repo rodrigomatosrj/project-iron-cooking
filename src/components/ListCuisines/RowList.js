@@ -7,7 +7,7 @@ function RowList(props) {
 			<div className="card mb-3">
 				<div className="row no-gutters">
 					<div className="col-md-4">
-						<Link to={`/categories/${props.title}`}>
+						<Link to={`/cuisines/${props.title}`}>
 							<img
 								src={`images/${props.title}.jpg`}
 								className="card-img"
@@ -21,7 +21,7 @@ function RowList(props) {
 							<p className="card-text">{props.description}</p>
 							<Link
 								className="btn btn-primary"
-								to={`/categories/${props.title}`}
+								to={`/cuisines/${props.title}`}
 							>
 								See meals
 							</Link>
