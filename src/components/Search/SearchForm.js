@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
-function SearchForm(props) {
+function SearchForm() {
 	const [searchItem, setSearchItem] = useState("");
 	const history = useHistory();
 
@@ -11,7 +11,7 @@ function SearchForm(props) {
 
 	function handleSubmit(event) {
 		event.preventDefault();
-		history.push(`/search/${searchItem}`	);
+		history.push(`/search/${searchItem}`);
 	}
 
 	return (
