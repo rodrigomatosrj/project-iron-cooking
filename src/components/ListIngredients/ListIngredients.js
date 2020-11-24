@@ -29,8 +29,8 @@ function ListIngredients() {
           <RowIngredients
             key={el.idIngredient}
             id={el.idIngredient}
-            description={el.strDescription}
             title={el.strIngredient}
+            description={el.strDescription}
           />
         ))
       )}
