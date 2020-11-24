@@ -15,36 +15,39 @@ import ListMealIngredients from "./components/ListIngredients/ListMealIngredient
 import Search from "./components/Search/Search";
 import ListCuisines from "./components/ListCuisines/ListCuisines";
 import ListLetters from "./components/ListByLetters/ListLetters";
+import ListMealCuisines from "./components/ListCuisines/ListMealCuisines";
+
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Container>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/meal/:id" component={Meal} />
-          <Route exact path="/categories" component={ListCategories} />
-          <Route exact path="/categories/:id" component={ListMealsCategory} />
-          <Route
-            exact
-            path="/ingredients/:title"
-            component={ListMealIngredients}
-          ></Route>
-          <Route exact path="/ingredients" component={ListIngredients}></Route>
-          <Route exact path="/search/:querystring" component={Search}></Route>
-          <Route exact path="/cuisines" component={ListCuisines}></Route>
-          <Route exact path="/searchbyletter" component={ListLetters}></Route>
-          <Route
-            exact
-            path="/searchbyletter/:letter"
-            component={ListLetters}
-          ></Route>
-        </Switch>
-        <Footer />
-      </Container>
-    </BrowserRouter>
-  );
+		<BrowserRouter>
+			<Header />
+			<Container>
+				<Switch>
+					<Route exact path="/" component={Home} />
+					<Route exact path="/meal/:id" component={Meal} />
+					<Route exact path="/categories" component={ListCategories} />
+					<Route exact path="/categories/:id" component={ListMealsCategory} />
+					<Route
+						exact
+						path="/ingredients/:title"
+						component={ListMealIngredients}
+					></Route>
+					<Route exact path="/ingredients" component={ListIngredients}></Route>
+					<Route exact path="/search/:querystring" component={Search}></Route>
+					<Route exact path="/cuisines" component={ListCuisines}></Route>
+					<Route exact path="/cuisines/:area" component={ListMealCuisines}></Route>
+					<Route exact path="/searchbyletter" component={ListLetters}></Route>
+					<Route
+						exact
+						path="/searchbyletter/:letter"
+						component={ListLetters}
+					></Route>
+				</Switch>
+				<Footer />
+			</Container>
+		</BrowserRouter>
+	);
 }
 
 export default App;

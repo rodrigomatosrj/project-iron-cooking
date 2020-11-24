@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Loading from "../Loading";
-import RowMealIngredients from "./RowMealngredients";
+import RowMeal from "../ListCategories/RowMeal";
 
 function ListMealIngredients(props) {
   const [ingList, setIngList] = useState([]);
@@ -27,7 +27,7 @@ function ListMealIngredients(props) {
         <Loading />
       ) : (
         ingList.map((food) => (
-          <RowMealIngredients
+          <RowMeal
             key={food.idMeal}
             id={food.idMeal}
             title={food.strMeal}
