@@ -2,8 +2,6 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
 
-import "../src/styles/bootstrap.css";
-
 import Home from "./components/Home/Home";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -16,6 +14,8 @@ import Search from "./components/Search/Search";
 import ListCuisines from "./components/ListCuisines/ListCuisines";
 import ListLetters from "./components/ListByLetters/ListLetters";
 import ListMealCuisines from "./components/ListCuisines/ListMealCuisines";
+
+import "../src/styles/bootstrap.css";
 
 
 function App() {
