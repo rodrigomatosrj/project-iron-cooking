@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./carousel.css";
 
 function ImageLink(props) {
   return (
-    <div style={{ width: "18rem" }} className="shadow-lg mt-5">
+    <div className="foodbox shadow-lg mt-5 bg-secondary">
       <Link to={`/${props.type}/${props.title}`}>
-        <img className="img-thumbnail" src={props.image} alt="food img" />
+        <img className="foodImg" src={props.image} alt="food img" />
       </Link>
     </div>
   );
