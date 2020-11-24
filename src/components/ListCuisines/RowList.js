@@ -9,7 +9,7 @@ function RowList(props) {
 					<div className="col-md-4">
 						<Link to={`/cuisines/${props.title}`}>
 							<img
-								src={`images/countries/${props.title}.png`}
+								src={`images/countries/${props.title.toLowerCase()}.png`}
 								className="card-img"
 								alt="..."
 							/>
@@ -19,10 +19,7 @@ function RowList(props) {
 						<div className="card-body">
 							<h5 className="card-title">{props.title}</h5>
 							<p className="card-text">{props.description}</p>
-							<Link
-								className="btn btn-primary"
-								to={`/cuisines/${props.title}`}
-							>
+							<Link className="btn btn-primary" to={`/cuisines/${props.title}`}>
 								See meals
 							</Link>
 						</div>

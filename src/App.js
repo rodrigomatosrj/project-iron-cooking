@@ -18,14 +18,14 @@ import ListMealCuisines from "./components/ListCuisines/ListMealCuisines";
 
 import "../src/styles/bootstrap.css";
 
-
 function App() {
-  return (
+	return (
 		<BrowserRouter>
 			<Header />
-			<Container>
-				<Switch>
-					<Route exact path="/" component={Home} />
+
+			<Switch>
+				<Route exact path="/" component={Home} />
+				<Container>
 					<Route exact path="/meal/:id" component={Meal} />
 					<Route exact path="/categories" component={ListCategories} />
 					<Route exact path="/categories/:id" component={ListMealsCategory} />
@@ -37,16 +37,21 @@ function App() {
 					<Route exact path="/ingredients" component={ListIngredients}></Route>
 					<Route exact path="/search/:querystring" component={Search}></Route>
 					<Route exact path="/cuisines" component={ListCuisines}></Route>
-					<Route exact path="/cuisines/:area" component={ListMealCuisines}></Route>
+					<Route
+						exact
+						path="/cuisines/:area"
+						component={ListMealCuisines}
+					></Route>
 					<Route exact path="/searchbyletter" component={ListLetters}></Route>
 					<Route
 						exact
 						path="/searchbyletter/:letter"
 						component={ListLetters}
 					></Route>
-				</Switch>
-				<Footer />
-			</Container>
+				</Container>
+			</Switch>
+
+			<Footer />
 		</BrowserRouter>
 	);
 }
