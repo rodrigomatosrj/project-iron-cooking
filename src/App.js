@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
+/* import "./App.css" */
 
 import "../src/styles/bootstrap.css";
 
