@@ -13,6 +13,7 @@ import ListMealsCategory from "./components/ListCategories/ListMealsCategory";
 import ListIngredients from "./components/ListIngredients/ListIngredients";
 import ListMealIngredients from "./components/ListIngredients/ListMealIngredients";
 import Search from "./components/Search/Search";
+import ListCuisines from "./components/ListCuisines/ListCuisines";
 
 function App() {
 	return (
@@ -31,6 +32,7 @@ function App() {
 					></Route>
 					<Route exact path="/ingredients" component={ListIngredients}></Route>
 					<Route exact path="/search/:querystring" component={Search}></Route>
+					<Route exact path="/cuisines" component={ListCuisines}></Route>
 				</Switch>
 				<Footer />
 			</Container>
