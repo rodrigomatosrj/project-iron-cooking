@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Loading from "../Loading";
-import RowCategory from "./RowCategory";
+import RowList from "./RowList";
 
 function ListCuisines() {
-	const [catList, setCatList] = useState([]);
+	const [cuisineList, setCuisineList] = useState([]);
 
 	useEffect(() => {
 		async function fetchData() {
 			try {
 				const response = await axios.get(
-					`https://www.themealdb.com/api/json/v1/1/categories.php`
+					`https://www.themealdb.com/api/json/v1/1/list.php?a=list`
 				);
-				setCatList([...response.data.categories]);
+				setCuisineList([...response.data.meals]);
 			} catch (err) {
 				console.error(err);
 			}
@@ -21,17 +21,14 @@ function ListCuisines() {
 	}, []);
 	return (
 		<div>
-			<h3>All Categories</h3>
-			{catList.length === 0 ? (
+			<h3>All Cuisines</h3>
+			{cuisineList.length === 0 ? (
 				<Loading />
 			) : (
-				catList.map((el) => (
-					<RowCategory
-						key={el.idCategory}
-						id={el.idCategory}
-						description={el.strCategoryDescription}
-						title={el.strCategory}
-						image={el.strCategoryThumb}
+				cuisineList.map((el) => (
+					<RowList
+						key={el.strArea}
+						title={el.strArea}
 					/>
 				))
 			)}
