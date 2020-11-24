@@ -32,7 +32,7 @@ function IngredientsGroup() {
             <Loading />
           ) : (
             catList
-              .filter((el, idx) => idx < 6)
+              .filter((el, idx) => idx < 8)
               .map((el) => (
                 <ImageLink
                   key={el.idIngredient}
@@ -45,7 +45,7 @@ function IngredientsGroup() {
           )}
         </Row>
         <Row className="d-flex justify-content-end mt-4 mr-4">
-          <Link className="btn btn-primary" to="/ingredients">
+          <Link className="btn btn-primary " to="/ingredients">
             See all categories
           </Link>
         </Row>

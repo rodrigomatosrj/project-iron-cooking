@@ -24,7 +24,7 @@ function CategoriesGroup() {
   }, []);
   return (
     <div>
-      <h3 className="ml-5 mt-4 "  >Categories</h3>
+      <h3 className="ml-5 mt-4 ">Categories</h3>
       <Container fluid>
         <Row className="d-flex justify-content-around ">
           {console.log(catList)}
@@ -32,7 +32,7 @@ function CategoriesGroup() {
             <Loading />
           ) : (
             catList
-              .filter((el, idx) => idx < 6)
+              .filter((el, idx) => idx < 8)
               .map((el) => (
                 <ImageLink
                   key={el.idCategory}
@@ -45,7 +45,7 @@ function CategoriesGroup() {
           )}
         </Row>
         <Row className="d-flex justify-content-end mt-4 mr-4">
-          <Link className="btn btn-primary" to="/categories">
+          <Link className="btn btn-primary " to="/categories">
             See all categories
           </Link>
         </Row>
