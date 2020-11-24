@@ -25,7 +25,7 @@ function ListCuisines() {
 			{cuisineList.length === 0 ? (
 				<Loading />
 			) : (
-				cuisineList.map((el) => (
+				cuisineList.filter(el=>el.strArea !== 'Unknown').map((el) => (
 					<RowList
 						key={el.strArea}
 						title={el.strArea}
