@@ -17,7 +17,6 @@ function RowIngredients(props) {
             <div className="card-body">
               <h5 className="card-title">{props.title}</h5>
 
-              <p>{props.description}</p>
               <Link
                 className="btn btn-primary"
                 to={`/ingredients/${props.title}`}

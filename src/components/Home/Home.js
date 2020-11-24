@@ -5,8 +5,8 @@ import IngredientsGroup from "./IngredientsGroup";
 
 function Home() {
   return (
-    <div>
-      Home
+    
+    <div >
       <CarouselDiv />
       <CategoriesGroup />
       <IngredientsGroup />
