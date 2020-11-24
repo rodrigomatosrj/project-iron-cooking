@@ -59,8 +59,12 @@ function ListLetters(props) {
       <h3>Choose a letter </h3>
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
-          {alphabet.map((alphabetLetter) => (
-            <li class="breadcrumb-item active" aria-current="page">
+          {alphabet.map((alphabetLetter, idx) => (
+            <li
+              key={idx}
+              className="breadcrumb-item active"
+              aria-current="page"
+            >
               <Link to={`/searchbyletter/${alphabetLetter}`}>
                 {alphabetLetter}
               </Link>
