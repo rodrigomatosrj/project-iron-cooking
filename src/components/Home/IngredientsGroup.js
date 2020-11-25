@@ -35,7 +35,6 @@ function IngredientsGroup() {
 							.filter((el, idx) => idx < 8)
 							.map((el) => (
 								<ImageLink
-                  
 									key={el.idIngredient}
 									id={encodeURI(el.strIngredient)}
 									type="ingredients"
@@ -47,7 +46,7 @@ function IngredientsGroup() {
 				</Row>
 				<Row className="d-flex justify-content-end mt-4 mr-5">
 					<Link className="btn btn-primary mt-2 " to="/ingredients">
-						See all categories
+						See all ingredients
 					</Link>
 				</Row>
 			</Container>

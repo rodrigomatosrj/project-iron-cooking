@@ -23,7 +23,7 @@ function App() {
   return (
     <BrowserRouter className="font">
       <Header />
-      <Container>
+   
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/meal/:id" component={Meal} />
@@ -50,7 +50,7 @@ function App() {
           ></Route>
           <Route exact path="/favorites" component={Favorites}></Route>
         </Switch>
-      </Container>
+  
       <Footer />
     </BrowserRouter>
   );
