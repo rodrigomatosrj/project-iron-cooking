@@ -16,7 +16,7 @@ const [favorites, setFavorites] = useState(fav);
 
 	return (
 		<div >
-			<h3>Favorites</h3>
+			<h3 className=" mt-3 pt-4">Favorites</h3>
 			{favorites.length === 0 ? (
 				<p>Not found!</p>
 			) : (

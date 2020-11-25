@@ -35,6 +35,7 @@ function IngredientsGroup() {
 							.filter((el, idx) => idx < 8)
 							.map((el) => (
 								<ImageLink
+                  
 									key={el.idIngredient}
 									id={encodeURI(el.strIngredient)}
 									type="ingredients"

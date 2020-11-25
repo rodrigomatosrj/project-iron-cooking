@@ -11,8 +11,10 @@
 	height: 250px;
 	transition: 0.5s ease;
 	backface-visibility: hidden;
-	box-shadow: 0 0 3px rgba(66, 49, 49, 0.9) inset;
-}
+	 box-shadow: 0 0 3px rgba(66, 49, 49, 0.9) inset;
+	 
+	
+ }
 
 .middle {
 	transition: 0.5s ease;
@@ -36,7 +38,7 @@
 .text {
 	background-color: #e26418;
 box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); 
-	color: white;
+	color: #ced0c3;
 	font-size: 20px;
 	padding: 16px 32px;
 }
