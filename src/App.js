@@ -16,7 +16,7 @@ import ListCuisines from "./components/ListCuisines/ListCuisines";
 import ListLetters from "./components/ListByLetters/ListLetters";
 import ListMealCuisines from "./components/ListCuisines/ListMealCuisines";
 import Favorites from "./components/Favorites/Favorites";
-
+import About from "./components/About/About";
 import "../src/styles/bootstrap.css";
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
    
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/aboutus" component={About} />
           <Route exact path="/meal/:id" component={Meal} />
           <Route exact path="/categories" component={ListCategories} />
           <Route exact path="/categories/:id" component={ListMealsCategory} />

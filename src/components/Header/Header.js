@@ -15,6 +15,7 @@ function Header() {
             <Nav.Link href="/cuisines">Cuisines</Nav.Link>
             <Nav.Link href="/searchbyletter/A">A to Z</Nav.Link>
             <Nav.Link href="/favorites">Favorites</Nav.Link>
+            <Nav.Link href="/aboutus">About</Nav.Link>
           </Nav>
           <SearchForm />
         </Navbar.Collapse>

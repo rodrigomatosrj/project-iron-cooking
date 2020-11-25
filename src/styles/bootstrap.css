@@ -10538,7 +10538,7 @@ a.text-warning:focus {
 }
 
 .text-danger {
-  color: #dc3545 !important;
+  color: #e26418 !important;
 }
 
 a.text-danger:hover,
@@ -10569,7 +10569,7 @@ a.text-dark:focus {
 }
 
 .text-muted {
-  color: #6c757d !important;
+  color: #ced0c3 !important;
 }
 
 .text-black-50 {
