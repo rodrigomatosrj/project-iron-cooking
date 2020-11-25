@@ -8,10 +8,8 @@ function Home() {
 	return (
 		<div>
 			<CarouselDiv />
-			<Container>
-				<CategoriesGroup />
-				<IngredientsGroup />
-			</Container>
+			<CategoriesGroup />
+			<IngredientsGroup />
 		</div>
 	);
 }
