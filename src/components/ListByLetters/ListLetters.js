@@ -53,7 +53,7 @@ function ListLetters(props) {
 
 	return (
 		<div>
-			<h3>Choose a letter </h3>
+			<h3 className="mt-4 mb-4">Choose a letter </h3>
 			<nav aria-label="breadcrumb">
 				<ol className="breadcrumb bg-secondary">
 					{alphabet.map((alphabetLetter, idx) => (
