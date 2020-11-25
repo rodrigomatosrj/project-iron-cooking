@@ -1,0 +1,42 @@
+.foodbox {
+	width: 250px;
+	height: 250px;
+	position: relative;
+}
+
+.foodImg {
+	opacity: 1;
+	display: block;
+	width: 250px;
+	height: 250px;
+	transition: 0.5s ease;
+	backface-visibility: hidden;
+	box-shadow: 0 0 3px rgba(66, 49, 49, 0.9) inset;
+}
+
+.middle {
+	transition: 0.5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.foodbox:hover .image {
+	opacity: 0.1;
+}
+
+.foodbox:hover .middle {
+	opacity: 1;
+}
+
+.text {
+	background-color: #e26418;
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); 
+	color: white;
+	font-size: 20px;
+	padding: 16px 32px;
+}

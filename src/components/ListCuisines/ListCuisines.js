@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Loading from "../Loading";
-import RowList from "./RowList";
+import ImageLink from "../../components/Home/ImageLink";
+import { Container, Row } from "react-bootstrap";
 
 function ListCuisines() {
 	const [cuisineList, setCuisineList] = useState([]);
@@ -22,16 +23,25 @@ function ListCuisines() {
 	return (
 		<div>
 			<h3>All Cuisines</h3>
-			{cuisineList.length === 0 ? (
-				<Loading />
-			) : (
-				cuisineList.filter(el=>el.strArea !== 'Unknown').map((el) => (
-					<RowList
-						key={el.strArea}
-						title={el.strArea}
-					/>
-				))
-			)}
+			<Container className="" fluid>
+				<Row className="d-flex justify-content-around ">
+					{cuisineList.length === 0 ? (
+						<Loading />
+					) : (
+						cuisineList
+							.filter((el) => el.strArea !== "Unknown")
+							.map((el) => (
+								<ImageLink
+									key={el.strArea}
+									id={el.strArea}
+									type="cuisines"
+									title={el.strArea}
+									image={`images/countries/${el.strArea.toLowerCase()}.png`}
+								/>
+							))
+					)}
+				</Row>
+			</Container>
 		</div>
 	);
 }
