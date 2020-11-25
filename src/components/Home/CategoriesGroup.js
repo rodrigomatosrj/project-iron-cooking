@@ -44,8 +44,8 @@ function CategoriesGroup() {
               ))
           )}
         </Row>
-        <Row className="d-flex justify-content-end mt-4 mr-4">
-          <Link className="btn btn-primary " to="/categories">
+        <Row className="d-flex justify-content-end mt-4 mr-5">
+          <Link className="btn btn-primary mt-2 " to="/categories">
             See all categories
           </Link>
         </Row>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function RowIngredients(props) {
   return (
     <div>
-      <div className="card mb-3">
+      <div className="card mb-3 bg-secondary">
         <div className="row no-gutters">
           <div className="col-md-4">
             <img
