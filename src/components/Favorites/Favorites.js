@@ -16,7 +16,9 @@ const [favorites, setFavorites] = useState(fav);
 
 	return (
 		<div >
-			<h3 className=" mt-3 pt-4">Favorites</h3>
+			<h3>Favorites</h3>
+						<Container className="" fluid>
+				<Row className="d-flex justify-content-around ">
 			{favorites.length === 0 ? (
 				<p>Not found!</p>
 			) : (
@@ -29,6 +31,8 @@ const [favorites, setFavorites] = useState(fav);
 					/>
 				))
 			)}
+			</Row>
+			</Container>
 		</div>
 	);
 }

@@ -31,7 +31,7 @@ function ListCategories() {
 						catList.map((el) => (
 							<ImageLink
 								key={el.idCategory}
-								id={el.idCategory}
+								id={encodeURI(el.strCategory)}
 								type="categories"
 								title={el.strCategory}
 								image={el.strCategoryThumb}
