@@ -6,7 +6,7 @@ function Header() {
   return (
     <header>
       <Navbar className="navbar-dark bg-dark" expand="lg">
-        <Navbar.Brand href="/">Iron Cooking</Navbar.Brand>
+        <Navbar.Brand href="/">WeFork!</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto navbar-dark ">
