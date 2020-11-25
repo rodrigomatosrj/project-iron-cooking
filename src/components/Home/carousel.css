@@ -2,9 +2,9 @@
   width: 100%; /* width of container */
   height: 500px; /* height of container */
   object-fit: cover;
- 
+
   border: 1px solid black;
-  
+
   object-position: 50% 50%;
 }
 
