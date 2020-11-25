@@ -22,7 +22,7 @@ function ListIngredients() {
 	}, []);
 	return (
 		<div>
-			<h3>Choose your ingredient</h3>
+			<h3 className="ml-3 mt-3 pt-4">Choose your ingredient</h3>
 			<Container className="" fluid>
 				<Row className="d-flex justify-content-around ">
 					{ingList.length === 0 ? (
