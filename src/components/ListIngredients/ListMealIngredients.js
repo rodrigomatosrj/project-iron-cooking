@@ -10,8 +10,8 @@ function ListMealIngredients(props) {
     async function fetchData() {
       try {
         const response = await axios.get(
-          `https://www.themealdb.com/api/json/v1/1/filter.php?i=${props.match.params.title}`
-        );
+					`https://www.themealdb.com/api/json/v1/1/filter.php?i=${encodeURI(props.match.params.title)}`
+				);
         setIngList([...response.data.meals]);
       } catch (err) {
         console.error(err);

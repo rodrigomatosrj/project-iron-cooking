@@ -17,7 +17,7 @@ function CarouselDiv() {
 						<Carousel.Item key={el.idMeal}>
 							<Link to={`/meal/${el.idMeal}`}>
 								<img
-									className="carouselImg"
+									className="carouselImg mt-5"
 									src={el.strMealThumb}
 									alt="Meal slide"
 								/>

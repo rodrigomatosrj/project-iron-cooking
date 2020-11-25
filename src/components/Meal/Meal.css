@@ -1,0 +1,9 @@
+.headerImg {
+  width: 100%; /* width of container */
+  height: 500px; /* height of container */
+  object-fit: cover;
+  box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
+
+  object-position: 50% 50%;
+}
+

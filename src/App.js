@@ -15,6 +15,7 @@ import Search from "./components/Search/Search";
 import ListCuisines from "./components/ListCuisines/ListCuisines";
 import ListLetters from "./components/ListByLetters/ListLetters";
 import ListMealCuisines from "./components/ListCuisines/ListMealCuisines";
+import Favorites from "./components/Favorites/Favorites";
 
 import "../src/styles/bootstrap.css";
 
@@ -22,10 +23,9 @@ function App() {
 	return (
 		<BrowserRouter>
 			<Header />
-
-			<Switch>
-				<Route exact path="/" component={Home} />
-				<Container>
+			<Container>
+				<Switch>
+					<Route exact path="/" component={Home} />
 					<Route exact path="/meal/:id" component={Meal} />
 					<Route exact path="/categories" component={ListCategories} />
 					<Route exact path="/categories/:id" component={ListMealsCategory} />
@@ -48,9 +48,9 @@ function App() {
 						path="/searchbyletter/:letter"
 						component={ListLetters}
 					></Route>
-				</Container>
-			</Switch>
-
+					<Route exact path="/favorites" component={Favorites}></Route>
+				</Switch>
+			</Container>
 			<Footer />
 		</BrowserRouter>
 	);

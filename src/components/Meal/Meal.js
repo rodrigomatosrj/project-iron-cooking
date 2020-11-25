@@ -1,9 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import "./Meal.css";
+import { Favorite, FavoriteBorder } from "@material-ui/icons";
 
 function Meal(props) {
+	let fav = [];
+
+	if (localStorage.hasOwnProperty("favorites")) {
+		fav = JSON.parse(localStorage.getItem("favorites"));
+	}
+
+	const [favorites, setFavorites] = useState(fav);
+
+	console.log(favorites);
+
 	const [meal, setMeal] = useState({
+		idMeal: 0,
 		strMeal: "",
 		strCategory: "",
 		strArea: "",
@@ -13,6 +26,34 @@ function Meal(props) {
 		strYoutube: "",
 	});
 
+	const [favorite, setFavorite] = useState(false);
+
+	function handleChange(event) {
+	
+		!favorite ? setFavorites([
+					...favorites,
+					{
+						idMeal: meal.idMeal,
+						strMeal: meal.strMeal,
+						strMealThumb: meal.strMealThumb,
+					},
+			  ])
+			: setFavorites([
+					...favorites.splice(
+						favorites.findIndex((x) => x.idMeal === meal.idMeal),
+						1
+					),
+			  ]);
+		setFavorite(!favorite);		  
+	}
+
+
+		
+
+	useEffect(() => {
+		localStorage.setItem("favorites", JSON.stringify(favorites));
+	}, [favorites]);
+
 	useEffect(() => {
 		async function fetchData() {
 			try {
@@ -20,6 +61,9 @@ function Meal(props) {
 					`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${props.match.params.id}`
 				);
 				setMeal({ ...response.data.meals[0] });
+				setFavorite(
+					favorites.map((el) => el.idMeal).includes(props.match.params.id)
+				);
 			} catch (err) {
 				console.error(err);
 			}
@@ -27,15 +71,52 @@ function Meal(props) {
 		fetchData();
 	}, [props]);
 
+	const ingredients = [...new Array(20)];
+
 	return (
 		<div>
+			<img className="headerImg" src={meal.strMealThumb} />
+
 			<h1>{meal.strMeal}</h1>
-			<p>
-				<Link to={`/categories/${meal.strCategory}`}>{meal.strCategory}</Link>
-			</p>
-			<p>
-				<Link to={`/areas/${meal.strArea}`}>{meal.strArea}</Link>
-			</p>
+
+			<h3>Instructions</h3>
+
+			<p>{meal.strInstructions}</p>
+
+			<h3>Ingredients</h3>
+			<div className="row">
+				<div className="col-lg-6">
+					<ul>
+						{ingredients.map((el, idx) =>
+							meal[`strIngredient${idx}`] ? (
+								<li>
+									{meal[`strIngredient${idx}`]} - {meal[`strMeasure${idx}`]}
+								</li>
+							) : (
+								<></>
+							)
+						)}
+					</ul>
+				</div>
+				<div className="col-lg-6">
+					{favorite ? (
+						<Favorite onClick={handleChange} />
+					) : (
+						<FavoriteBorder onClick={handleChange} />
+					)}
+
+					<h3>
+						<Link to={`/categories/${meal.strCategory}`}>
+							See more {meal.strCategory}'s meals
+						</Link>
+					</h3>
+					<h3>
+						<Link to={`/cuisines/${meal.strArea}`}>
+							See more from {meal.strArea} cuisine
+						</Link>
+					</h3>
+				</div>
+			</div>
 		</div>
 	);
 }

@@ -5,8 +5,8 @@ import "./carousel.css";
 function ImageLink(props) {
 	return (
 		<div className="foodbox shadow-lg bg-secondary mt-5">
-			<Link to={`/${props.type}/${props.title}`}>
-				<img className="foodImg" src={props.image} alt="food img" />
+			<Link to={`/${props.type}/${encodeURI(props.title)}`}>
+				<img className="foodImg" src={props.image} alt={props.title} />
 			</Link>
 		</div>
 	);
