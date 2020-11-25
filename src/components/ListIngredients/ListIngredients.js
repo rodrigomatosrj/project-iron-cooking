@@ -31,7 +31,7 @@ function ListIngredients() {
 						ingList.map((el) => (
 							<ImageLink
 								key={el.idIngredient}
-								id={el.encodeURI(strIngredient)}
+								id={encodeURI(el.strIngredient)}
 								type="ingredients"
 								title={el.strIngredient}
 								image={`https://www.themealdb.com/images/ingredients/${el.strIngredient}.png`}
