@@ -1,35 +1,43 @@
 import React from "react";
-
+import "./about.css";
 function About() {
   return (
-    <div>
-      <h1>You got time? We got the recipe!</h1>
-
-      <blockquote className="blockquote">
-        <p className="mb-0">WeFork! changed my life.</p>
-        <footer className="blockquote-footer">
-          Creators<cite title="Source Title">it</cite>
-        </footer>
-      </blockquote>
-
-      <blockquote className="blockquote">
-        <p className="mb-0">Magnifique!</p>
-        <footer className="blockquote-footer">
-          That weird Ratatouille mouse<cite title="Source Title"></cite>
-        </footer>
-      </blockquote>
-
-      <p>
-        WeFork! was created so you can have fun! Ever wondered about what do
-        they eat in Egypt? We got you. Never tried a meal that stars with the
-        letter T? Yap, we got you. Told someone you are interest in, that you
-        LOVE lentils and now you have to prepare something for that special
-        someon? You know the drill, we got you!
+    <div className="bg-dark shadow-lg  div">
+      <h1 className="mt-5 text-center pt-5 pb-5  text-danger ">
+        You got time? We got the recipe!
+      </h1>
+      <p className="ml-5 pt-5 text-muted text-center mr-5 ">
+        WeFork! was created so you can have fun! Ever wondered about what people
+        eat in Egypt? We got you.
+        <br /> Are you a fan of meals starting with "T"? Yap, we got you. <br />
+        Told someone that you like, that you REEALY LOVE lentils and now you
+        have to cook for that special someone?
+        <br /> You know the drill, we got you!
       </p>
-
-      <h2>Contact the creators</h2>
-      <p>guilherme.tretow@gmail.com</p>
-      <p>rodrigomatosrj@gmail.com</p>
+      <div>
+        <div className="pt-5 text-center">
+          <blockquote className="blockquote mt-5 ml-5  ">
+            <p className="mb-0 text-muted">“WeFork! changed our lives”</p>
+            <footer className="blockquote-footer">
+              Creators<cite title="Source Title"></cite>
+            </footer>
+          </blockquote>
+        </div>
+        <br></br>
+        <div>
+          <blockquote className="blockquote text-center ml-5">
+            <p className="mb-0 text-muted">“Magnifique”</p>
+            <footer className="blockquote-footer">
+              That weird Ratatouille mouse<cite title="Source Title"></cite>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+      <div className="ml-5 bottom contact text-center ">
+        <h2 className="text-danger ">Contact the creators</h2>
+        <p className="text-muted">guilherme.tretow@gmail.com</p>
+        <p className="text-muted">rodrigomatosrj@gmail.com</p>
+      </div>
     </div>
   );
 }
