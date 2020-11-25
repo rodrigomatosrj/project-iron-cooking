@@ -29,26 +29,25 @@ function Meal(props) {
 	const [favorite, setFavorite] = useState(false);
 
 	function handleChange(event) {
-	
-		!favorite ? setFavorites([
-					...favorites,
-					{
-						idMeal: meal.idMeal,
-						strMeal: meal.strMeal,
-						strMealThumb: meal.strMealThumb,
-					},
-			  ])
-			: setFavorites([
-					...favorites.splice(
-						favorites.findIndex((x) => x.idMeal === meal.idMeal),
-						1
-					),
-			  ]);
-		setFavorite(!favorite);		  
+		if (!favorite) {
+			setFavorites([
+				...favorites,
+				{
+					idMeal: meal.idMeal,
+					strMeal: meal.strMeal,
+					strMealThumb: meal.strMealThumb,
+				},
+			]);
+		} else {
+			let fav = [...favorites];
+			fav.splice(
+				fav.findIndex((x) => x.idMeal === meal.idMeal),
+				1
+			);
+			setFavorites([...fav]);
+		}
+		setFavorite(!favorite);
 	}
-
-
-		
 
 	useEffect(() => {
 		localStorage.setItem("favorites", JSON.stringify(favorites));
