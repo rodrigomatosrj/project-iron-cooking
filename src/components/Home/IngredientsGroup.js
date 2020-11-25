@@ -44,8 +44,8 @@ function IngredientsGroup() {
               ))
           )}
         </Row>
-        <Row className="d-flex justify-content-end mt-4 mr-4">
-          <Link className="btn btn-primary " to="/ingredients">
+        <Row className="d-flex justify-content-end mt-4 mr-5">
+          <Link className="btn btn-primary mt-2 " to="/ingredients">
             See all categories
           </Link>
         </Row>

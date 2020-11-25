@@ -172,13 +172,14 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #232421;
   text-decoration: none;
   background-color: transparent;
+  transition: 0.3s;
 }
 
 a:hover {
-  color: #0056b3;
+  color: #000000;
   text-decoration: underline;
 }
 
@@ -2712,7 +2713,7 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #ced0c3;
-  background-color: #343A40;
+  background-color: #343a40;
   border-color: #ca6f19;
 }
 
@@ -5008,12 +5009,12 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.5);
+  color: #ced0c3;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:focus {
-  color: rgba(255, 255, 255, 0.75);
+  color: #e26418;
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {
@@ -7017,6 +7018,7 @@ a.close.disabled {
   padding-top: 20px;
   padding-bottom: 20px;
   color: #fff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   text-align: center;
 }
 

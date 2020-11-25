@@ -11,12 +11,13 @@ function CarouselDiv() {
 		<>
 			<CarouselImage state={[image, setImage]} />
 
-			<Carousel>
+			<Carousel  >
 				{image.map((el) => {
 					return (
 						<Carousel.Item key={el.idMeal}>
 							<Link to={`/meal/${el.idMeal}`}>
-								<img
+								<img 
+				                    
 									className="carouselImg mt-5"
 									src={el.strMealThumb}
 									alt="Meal slide"
