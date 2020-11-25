@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Loading from "../Loading";
 import ImageLink from "../../components/Home/ImageLink";
-import {Container, Row} from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 function ListIngredients() {
 	const [ingList, setIngList] = useState([]);
@@ -31,7 +31,7 @@ function ListIngredients() {
 						ingList.map((el) => (
 							<ImageLink
 								key={el.idIngredient}
-								id={el.idIngredient}
+								id={el.encodeURI(strIngredient)}
 								type="ingredients"
 								title={el.strIngredient}
 								image={`https://www.themealdb.com/images/ingredients/${el.strIngredient}.png`}
