@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import RowMeal from "../ListCategories/RowMeal";
 import Loading from "../Loading";
+import ImageLink from "../../components/Home/ImageLink";
+import { Container, Row } from "react-bootstrap";
 
 function ListMealCuisines(props) {
 	const [catCuisine, setCatCuisine] = useState([]);
@@ -23,18 +24,23 @@ function ListMealCuisines(props) {
 	return (
 		<div>
 			<h3>{props.match.params.id}</h3>
-			{catCuisine.length === 0 ? (
-				<Loading />
-			) : (
-				catCuisine.map((el) => (
-					<RowMeal
-						key={el.idMeal}
-						id={el.idMeal}
-						title={el.strMeal}
-						image={el.strMealThumb}
-					/>
-				))
-			)}
+			<Container className="" fluid>
+				<Row className="d-flex justify-content-around ">
+					{catCuisine.length === 0 ? (
+						<Loading />
+					) : (
+						catCuisine.map((el) => (
+							<ImageLink
+								key={el.idMeal}
+								id={el.idMeal}
+								type="Meal"
+								title={el.strMeal}
+								image={el.strMealThumb}
+							/>
+						))
+					)}
+				</Row>
+			</Container>
 		</div>
 	);
 }

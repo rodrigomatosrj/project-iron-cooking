@@ -1,6 +1,4 @@
 import React from "react";
-// eslint-disable-next-line no-unused-vars
-import { Container } from "react-bootstrap";
 import CarouselDiv from "./CarouselDiv";
 import CategoriesGroup from "./CategoriesGroup";
 import IngredientsGroup from "./IngredientsGroup";

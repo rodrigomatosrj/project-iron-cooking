@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Loading from "../Loading";
-import RowMeal from "../ListCategories/RowMeal";
+import ImageLink from "../../components/Home/ImageLink";
+import {Container, Row} from "react-bootstrap";
 
 function ListMealIngredients(props) {
   const [ingList, setIngList] = useState([]);
@@ -21,22 +22,27 @@ function ListMealIngredients(props) {
   }, [props]);
   console.log(ingList);
   return (
-    <div>
-      <h3>Meals</h3>
-      {ingList.length === 0 ? (
-        <Loading />
-      ) : (
-        ingList.map((food) => (
-          <RowMeal
-            key={food.idMeal}
-            id={food.idMeal}
-            title={food.strMeal}
-            image={food.strMealThumb}
-          />
-        ))
-      )}
-    </div>
-  );
+		<div>
+			<h3>Meals</h3>
+			<Container className="" fluid>
+				<Row className="d-flex justify-content-around ">
+					{ingList.length === 0 ? (
+						<Loading />
+					) : (
+						ingList.map((food) => (
+							<ImageLink
+								key={food.idMeal}
+								id={food.idMeal}
+								type="meal"
+								title={food.strMeal}
+								image={food.strMealThumb}
+							/>
+						))
+					)}
+				</Row>
+			</Container>
+		</div>
+	);
 }
 
 export default ListMealIngredients;

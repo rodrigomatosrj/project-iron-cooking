@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
-import RowMeal from "../../components/ListCategories/RowMeal";
+import ImageLink from "../../components/Home/ImageLink";
+import { Container, Row } from "react-bootstrap";
 
 function Favorites() {
 
@@ -20,7 +21,7 @@ const [favorites, setFavorites] = useState(fav);
 				<p>Not found!</p>
 			) : (
 				favorites.map((el) => (
-					<RowMeal
+					<ImageLink
 						key={el.idMeal}
 						id={el.idMeal}
 						title={el.strMeal}

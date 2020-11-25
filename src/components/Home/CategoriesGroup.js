@@ -23,35 +23,35 @@ function CategoriesGroup() {
     fetchData();
   }, []);
   return (
-    <div>
-      <h3 className="ml-5 mt-4 ">Categories</h3>
-      <Container fluid>
-        <Row className="d-flex justify-content-around ">
-          {console.log(catList)}
-          {catList.length === 0 ? (
-            <Loading />
-          ) : (
-            catList
-              .filter((el, idx) => idx < 8)
-              .map((el) => (
-                <ImageLink
-                  key={el.idCategory}
-                  id={el.idCategory}
-                  title={el.strCategory}
-                  type="categories"
-                  image={el.strCategoryThumb}
-                />
-              ))
-          )}
-        </Row>
-        <Row className="d-flex justify-content-end mt-4 mr-5">
-          <Link className="btn btn-primary mt-2 " to="/categories">
-            See all categories
-          </Link>
-        </Row>
-      </Container>
-    </div>
-  );
+		<div>
+			<h3 className="ml-5 mt-4 ">Categories</h3>
+			<Container fluid>
+				<Row className="d-flex justify-content-around ">
+					{console.log(catList)}
+					{catList.length === 0 ? (
+						<Loading />
+					) : (
+						catList
+							.filter((el, idx) => idx < 8)
+							.map((el) => (
+								<ImageLink
+									key={el.idCategory}
+									id={encodeURI(el.strCategory)}
+									title={el.strCategory}
+									type="categories"
+									image={el.strCategoryThumb}
+								/>
+							))
+					)}
+				</Row>
+				<Row className="d-flex justify-content-end mt-4 mr-5">
+					<Link className="btn btn-primary mt-2 " to="/categories">
+						See all categories
+					</Link>
+				</Row>
+			</Container>
+		</div>
+	);
 }
 
 export default CategoriesGroup;
