@@ -20,40 +20,40 @@ import Favorites from "./components/Favorites/Favorites";
 import "../src/styles/bootstrap.css";
 
 function App() {
-  return (
-    <BrowserRouter className="font">
-      <Header />
-   
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/meal/:id" component={Meal} />
-          <Route exact path="/categories" component={ListCategories} />
-          <Route exact path="/categories/:id" component={ListMealsCategory} />
-          <Route
-            exact
-            path="/ingredients/:title"
-            component={ListMealIngredients}
-          ></Route>
-          <Route exact path="/ingredients" component={ListIngredients}></Route>
-          <Route exact path="/search/:querystring" component={Search}></Route>
-          <Route exact path="/cuisines" component={ListCuisines}></Route>
-          <Route
-            exact
-            path="/cuisines/:area"
-            component={ListMealCuisines}
-          ></Route>
-          <Route exact path="/searchbyletter" component={ListLetters}></Route>
-          <Route
-            exact
-            path="/searchbyletter/:letter"
-            component={ListLetters}
-          ></Route>
-          <Route exact path="/favorites" component={Favorites}></Route>
-        </Switch>
-  
-      <Footer />
-    </BrowserRouter>
-  );
+	return (
+		<BrowserRouter className="font">
+			<Header />
+			<Container>
+				<Switch>
+					<Route exact path="/" component={Home} />
+					<Route exact path="/meal/:id" component={Meal} />
+					<Route exact path="/categories" component={ListCategories} />
+					<Route exact path="/categories/:id" component={ListMealsCategory} />
+					<Route
+						exact
+						path="/ingredients/:title"
+						component={ListMealIngredients}
+					></Route>
+					<Route exact path="/ingredients" component={ListIngredients}></Route>
+					<Route exact path="/search/:querystring" component={Search}></Route>
+					<Route exact path="/cuisines" component={ListCuisines}></Route>
+					<Route
+						exact
+						path="/cuisines/:area"
+						component={ListMealCuisines}
+					></Route>
+					<Route exact path="/searchbyletter" component={ListLetters}></Route>
+					<Route
+						exact
+						path="/searchbyletter/:letter"
+						component={ListLetters}
+					></Route>
+					<Route exact path="/favorites" component={Favorites}></Route>
+				</Switch>
+			</Container>
+			<Footer />
+		</BrowserRouter>
+	);
 }
 
 export default App;
