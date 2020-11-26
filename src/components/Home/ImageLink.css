@@ -96,13 +96,13 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 	display: inline-block;
 	text-decoration: none;
 	padding: 7px 14px;
-	border: 1px solid #fff;
+	border: 1px solid #ced0c3;
 	margin: 50px 0 0 0;
 	background-color: transparent;
 }
 
 .hovereffect a.info:hover {
-	box-shadow: 0 0 5px #fff;
+	box-shadow: 0 0 5px #ced0c3;
 }
 
 .hovereffect a.info,
