@@ -16,7 +16,7 @@ import ListCuisines from "./components/ListCuisines/ListCuisines";
 import ListLetters from "./components/ListByLetters/ListLetters";
 import ListMealCuisines from "./components/ListCuisines/ListMealCuisines";
 import Favorites from "./components/Favorites/Favorites";
-
+import About from "./components/About/About";
 import "../src/styles/bootstrap.css";
 
 function App() {
