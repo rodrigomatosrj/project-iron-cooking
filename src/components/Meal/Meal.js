@@ -100,9 +100,9 @@ function Meal(props) {
         </div>
         <div className="col-lg-6">
           {favorite ? (
-            <Favorite onClick={handleChange} />
+            <Favorite className="btnfavorite" onClick={handleChange} />
           ) : (
-            <FavoriteBorder onClick={handleChange} />
+            <FavoriteBorder className="btnunfavorite" onClick={handleChange} />
           )}
 
           <h3>
