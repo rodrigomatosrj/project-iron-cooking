@@ -75,7 +75,8 @@ function Meal(props) {
 
   return (
     <div>
-      <img className="headerImg" src={meal.strMealThumb} alt="headimg" />
+    <br/>
+      <img className="headerImg border border-dark" src={meal.strMealThumb} alt="headimg" />
 
       <h1>{meal.strMeal}</h1>
 
