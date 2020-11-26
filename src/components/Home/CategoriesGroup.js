@@ -24,7 +24,8 @@ function CategoriesGroup() {
   }, []);
   return (
 		<div>
-			<h3 className="ml-5 mt-4 ">Categories</h3>
+			<h3 className="text-center mt-4 ">Categories</h3>
+			<p  className="text-center">Pasta? Vegan? Maybe some Dessert? You can find anything here.</p>
 			<Container fluid>
 				<Row className="d-flex justify-content-around ">
 					{console.log(catList)}

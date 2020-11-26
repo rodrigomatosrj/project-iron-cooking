@@ -24,7 +24,8 @@ function IngredientsGroup() {
 	}, []);
 	return (
 		<div>
-			<h3 className="ml-5 mt-4 ">Ingredients </h3>
+			<h3 className="text-center mt-4 ">Ingredients </h3>
+			<p  className="text-center">Ever wondered about what can you do with Pickle Juice? <br/>Of course you did. Here you can find recipes for any ingredient that you want.</p>
 			<Container className="" fluid>
 				<Row className="d-flex justify-content-around ">
 					{console.log(catList)}
