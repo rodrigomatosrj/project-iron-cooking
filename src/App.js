@@ -26,6 +26,7 @@ function App() {
 			<Container>
 				<Switch>
 					<Route exact path="/" component={Home} />
+					<Route exact path="/aboutus" component={About} />
 					<Route exact path="/meal/:id" component={Meal} />
 					<Route exact path="/categories" component={ListCategories} />
 					<Route exact path="/categories/:id" component={ListMealsCategory} />
