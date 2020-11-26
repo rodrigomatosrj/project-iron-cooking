@@ -2,13 +2,11 @@ import React from "react";
 import CarouselDiv from "./CarouselDiv";
 import CategoriesGroup from "./CategoriesGroup";
 import IngredientsGroup from "./IngredientsGroup";
-import HighLights from "./Highlights";
-import { Container } from "react-bootstrap";
+
 
 function Home() {
 	return (
 		<div>
-			<Container>
 				<h2 className="text-center mt-4 pt-3">
 					You got time? We got the recipe!
 				</h2>
@@ -18,11 +16,9 @@ function Home() {
 				</h5>
 				<CarouselDiv />
 				<CategoriesGroup />
-			</Container>
-			<HighLights />
-			<Container>
+			
 				<IngredientsGroup />
-			</Container>
+
 		</div>
 	);
 }
