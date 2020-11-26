@@ -22,29 +22,29 @@ function ListCuisines() {
     fetchData();
   }, []);
   return (
-    <div>
-      <h3 className="ml-3 mt-3 pt-4">All Cuisines</h3>
-      <Container className="" fluid>
-        <Row className="d-flex justify-content-around   ">
-          {cuisineList.length === 0 ? (
-            <Loading />
-          ) : (
-            cuisineList
-              .filter((el) => el.strArea !== "Unknown")
-              .map((el) => (
-                <ImageLink
-                  key={el.strArea}
-                  id={el.strArea}
-                  type="cuisines"
-                  title={el.strArea}
-                  image={`images/countries/${el.strArea.toLowerCase()}.png`}
-                />
-              ))
-          )}
-        </Row>
-      </Container>
-    </div>
-  );
+		<div className="min-height90">
+			<h3 className="ml-3 mt-3 pt-4">All Cuisines</h3>
+			<Container className="" fluid>
+				<Row className="d-flex justify-content-around   ">
+					{cuisineList.length === 0 ? (
+						<Loading />
+					) : (
+						cuisineList
+							.filter((el) => el.strArea !== "Unknown")
+							.map((el) => (
+								<ImageLink
+									key={el.strArea}
+									id={el.strArea}
+									type="cuisines"
+									title={el.strArea}
+									image={`images/countries/${el.strArea.toLowerCase()}.png`}
+								/>
+							))
+					)}
+				</Row>
+			</Container>
+		</div>
+	);
 }
 
 export default ListCuisines;

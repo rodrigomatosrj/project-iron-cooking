@@ -29,8 +29,8 @@ function Search(props) {
 	}, [props]);
 
 	return (
-		<div>
-			<h3>Search Result</h3>
+		<div className="min-height90">
+			<h3 className="ml-3 mt-3 pt-4">Search Result</h3>
 			<Container className="" fluid>
 				<Row className="d-flex justify-content-around ">
 					{loading ? <Loading /> : <></>}

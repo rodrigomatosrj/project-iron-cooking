@@ -22,8 +22,8 @@ function ListMealIngredients(props) {
   }, [props]);
   console.log(ingList);
   return (
-		<div>
-			<h3>Meals</h3>
+		<div className="min-height90">
+			<h3 className="ml-3 mt-3 pt-4">{props.match.params.title}</h3>
 			<Container className="" fluid>
 				<Row className="d-flex justify-content-around ">
 					{ingList.length === 0 ? (

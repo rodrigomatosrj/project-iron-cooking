@@ -52,7 +52,7 @@ function ListLetters(props) {
 	}, [props.match.params.letter]);
 
 	return (
-		<div>
+		<div className="min-height90">
 			<h3 className="mt-4 mb-4">Choose a letter </h3>
 			<nav aria-label="breadcrumb">
 				<ol className="breadcrumb bg-secondary">
