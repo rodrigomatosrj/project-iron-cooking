@@ -24,7 +24,7 @@ function ListMealsCategory(props) {
 
 	return (
 		<div>
-			<h3>{props.match.params.id}</h3>
+			<h3 className="ml-3 mt-3 pt-4">{props.match.params.id}</h3>
 			<Container className="" fluid>
 				<Row className="d-flex justify-content-around ">
 					{catList.length === 0 ? (
