@@ -28,7 +28,7 @@ function About() {
           <blockquote className="blockquote text-center ml-5">
             <p className="mb-0 text-muted">“Magnifique”</p>
             <footer className="blockquote-footer">
-              That weird Ratatouille mouse<cite title="Source Title"></cite>
+              That weird Ratatouille rat<cite title="Source Title"></cite>
             </footer>
           </blockquote>
         </div>
