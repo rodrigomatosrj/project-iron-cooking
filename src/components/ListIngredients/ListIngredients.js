@@ -21,7 +21,7 @@ function ListIngredients() {
 		fetchData();
 	}, []);
 	return (
-		<div>
+		<div className="min-height90">
 			<h3 className="ml-3 mt-3 pt-4">Choose your ingredient</h3>
 			<Container className="" fluid>
 				<Row className="d-flex justify-content-around ">
